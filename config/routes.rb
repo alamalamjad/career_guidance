@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cities
   resources :states
   resources :cert_authority_types
   resources :ranking_authorities
