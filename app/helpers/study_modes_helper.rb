@@ -1,0 +1,2 @@
+module StudyModesHelper
+end
