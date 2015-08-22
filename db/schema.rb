@@ -11,13 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822103454) do
+ActiveRecord::Schema.define(version: 20150822104018) do
 
   create_table "cert_authority_types", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "certification_authorities", force: :cascade do |t|
+    t.string   "name",                   limit: 255
+    t.string   "code",                   limit: 255
+    t.integer  "cert_authority_type_id", limit: 4
+    t.integer  "city_id",                limit: 4
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
+
+  add_index "certification_authorities", ["cert_authority_type_id"], name: "index_certification_authorities_on_cert_authority_type_id", using: :btree
+  add_index "certification_authorities", ["city_id"], name: "index_certification_authorities_on_city_id", using: :btree
 
   create_table "cities", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -74,5 +86,7 @@ ActiveRecord::Schema.define(version: 20150822103454) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "certification_authorities", "cert_authority_types"
+  add_foreign_key "certification_authorities", "cities"
   add_foreign_key "cities", "states"
 end

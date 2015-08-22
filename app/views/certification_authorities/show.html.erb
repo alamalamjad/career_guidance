@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @certification_authority.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @certification_authority.code %>
+</p>
+
+<p>
+  <strong>Cert authority type:</strong>
+  <%= @certification_authority.cert_authority_type %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @certification_authority.city %>
+</p>
+
+<%= link_to 'Edit', edit_certification_authority_path(@certification_authority) %> |
+<%= link_to 'Back', certification_authorities_path %>

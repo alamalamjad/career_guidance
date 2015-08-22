@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+  cert_authority_type_id: 
+  city_id: 
+
+two:
+  name: MyString
+  code: MyString
+  cert_authority_type_id: 
+  city_id: 

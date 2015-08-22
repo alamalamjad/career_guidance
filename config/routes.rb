@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :certification_authorities
   resources :cities
   resources :states
   resources :cert_authority_types
