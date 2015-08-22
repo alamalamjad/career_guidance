@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822083814) do
+ActiveRecord::Schema.define(version: 20150822102742) do
 
   create_table "cert_authority_types", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 20150822083814) do
     t.string   "code",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.string   "code",         limit: 255
+    t.string   "country_code", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "streams", force: :cascade do |t|
