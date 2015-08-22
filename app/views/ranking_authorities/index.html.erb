@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ranking Authorities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ranking_authorities.each do |ranking_authority| %>
+      <tr>
+        <td><%= ranking_authority.name %></td>
+        <td><%= ranking_authority.code %></td>
+        <td><%= link_to 'Show', ranking_authority %></td>
+        <td><%= link_to 'Edit', edit_ranking_authority_path(ranking_authority) %></td>
+        <td><%= link_to 'Destroy', ranking_authority, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ranking authority', new_ranking_authority_path %>

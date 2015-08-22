@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ranking_authorities
+  resources :institution_types
   resources :course_types
   resources :course_levels
   resources :streams

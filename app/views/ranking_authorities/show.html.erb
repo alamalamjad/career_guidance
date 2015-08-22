@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ranking_authority.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @ranking_authority.code %>
+</p>
+
+<%= link_to 'Edit', edit_ranking_authority_path(@ranking_authority) %> |
+<%= link_to 'Back', ranking_authorities_path %>
