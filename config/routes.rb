@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :course_types
+  resources :course_levels
   resources :streams
   root 'dashboard#index'
 
