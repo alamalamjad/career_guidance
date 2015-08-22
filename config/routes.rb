@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cert_authority_types
   resources :ranking_authorities
   resources :institution_types
   resources :course_types
