@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
+  resources :streams
+  root 'dashboard#index'
 
   resources :study_modes
   # The priority is based upon order of creation: first created -> highest priority.
